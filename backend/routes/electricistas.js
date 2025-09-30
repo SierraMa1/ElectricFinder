@@ -29,7 +29,7 @@ router.get('/:id', function(req, res) {
         }
         electricista = results[0];
 
-        const sql2 = "SELECT v.comentario, v.puntuacion, u.nombre, u.ubicacion, u.id FROM valoraciones v INNER JOIN electricistas e ON e.id = v.id_electricista INNER JOIN usuarios u ON v.id_usuario = u.id WHERE e.id = ?";
+        const sql2 = "SELECT v.comentario, v.puntuacion, u.nombre, u.ubicacion, u.id, u.url_foto FROM valoraciones v INNER JOIN electricistas e ON e.id = v.id_electricista INNER JOIN usuarios u ON v.id_usuario = u.id WHERE e.id = ?";
         db.query(sql2, req.params.id, (err2, results2) => {
             if (err2) {
                 console.error('Error al obtener electricistas:', err2);
