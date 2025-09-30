@@ -2,3 +2,4 @@ Backend/node_modules/*
 Front/node_modules/*
 Backend/db.js
 Front/public/images/*
+.env
