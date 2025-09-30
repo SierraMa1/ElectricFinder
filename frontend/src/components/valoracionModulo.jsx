@@ -10,7 +10,7 @@ const ValoracionModulo = ( {valoracion} ) => {
                     <div className="flex gap-5 max-md:flex-col max-md:gap-0">
                         <div className="flex flex-col w-[46%] max-md:ml-0 max-md:w-full">
                             <div className="flex overflow-hidden relative flex-col items-end px-16 pt-20 pb-4 aspect-[1.11] max-md:px-5 max-md:mt-5">
-                                {valoracion.url_foto && valoracion.typeFoto ? (
+                                {valoracion.url_foto ? (
                                     <img src={`${valoracion.url_foto}`} alt={`${valoracion.usuario}`} className="object-cover absolute inset-0 w-100 h-50" />
 
                                 ) : (
