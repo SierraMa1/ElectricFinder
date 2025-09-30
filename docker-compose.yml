@@ -58,7 +58,7 @@ services:
     volumes:
       - ./proxy/nginx.conf:/etc/nginx/conf.d/default.conf:ro # Monta la configuración de Nginx
       - uploads_data:/usr/share/nginx/html/uploads:ro # El proxy lee desde aquí
-      - ~/certbot/conf:/etc/letsencrypt                          # Carpeta para los certificados
+      - /etc/letsencrypt:/etc/letsencrypt:ro                      # Carpeta para los certificados
       - ~/certbot/www:/var/www/certbot                           # Carpeta para la validación de Certbot
     depends_on:
       - backend
